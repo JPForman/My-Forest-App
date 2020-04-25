@@ -1,0 +1,28 @@
+.ground {
+  background-color: #336600;
+  /* margin-top: 200%; */
+  top: 35%;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.sky {
+  background-color: #00cccc;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.sun {
+  height: 80vh;
+  width: 80vh;
+  background-color: gold;
+  position: absolute;
+  border-radius: 100%;
+  z-index: -1;
+  top: 10%;
+}

@@ -1,11 +1,15 @@
 import React, { useState }  from 'react';
 import Calendar from './Calendar';
+import Key from './Key';
+import keyHole from '../img/keyhole.png';
 
 //style sheets
 import '../css/myForest.css'
 
 function MyForest() {
 
+
+  //Calendar Display Toggler
   const [calendarDisplay, setCalendarDisplay] = useState('none');
 
   function hideCalendar() {
@@ -15,6 +19,18 @@ function MyForest() {
         setCalendarDisplay('block');
       }
     }
+
+
+    // Key Display Toggler
+    const [keyDisplay, setkeyDisplay] = useState('none');
+
+    function ToggleKey() {
+      if (keyDisplay === 'block') {
+        setkeyDisplay('none'); }
+        else if(keyDisplay === 'none') {
+          setkeyDisplay('block');
+        }
+      }
     
     return (
       <div className='myForest'>
@@ -27,6 +43,15 @@ function MyForest() {
         <div className='calendarReact' style={{display: `${calendarDisplay}`}}>
           <Calendar className='calendar' />
         </div>
+
+        <a onClick={ToggleKey} className='keyHoleDiv'>
+          <img className='keyHole' src={keyHole}></img>
+        </a>
+
+        <div className='keyDiv' style={{display: `${keyDisplay}`}}>
+          <Key />
+        </div>
+
       </div>
     );
 }

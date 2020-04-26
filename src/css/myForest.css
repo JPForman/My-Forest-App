@@ -8,6 +8,21 @@
   z-index: -1;
 }
 
+.keyHole{
+  position: absolute;
+  height: 10vh;
+  right: 2vh;
+  bottom: 2vh;
+  border:2px solid black;
+  border-radius: 5px;
+}
+
+.keyHoleDiv {
+  cursor: pointer;
+  right: 0;
+
+
+}
 .mountain{
     border-color: transparent;
     background-color: transparent;
